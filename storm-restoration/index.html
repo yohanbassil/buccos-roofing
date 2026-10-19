@@ -74,10 +74,11 @@
 </script>
 <style>
   :root {
-    --red: #b3202a;
-    --red-dark: #8c1820;
-    --char: #1c1d21;
-    --char-2: #2a2c31;
+    --red: #FFB612;
+    --red-dark: #E5A200;
+    --gold-text: #9a6b00;
+    --char: #111111;
+    --char-2: #222222;
     --bg: #f6f5f3;
     --ink: #1c1d21;
     --muted: #63656b;
@@ -91,38 +92,38 @@
 
   .demo-note { background: #ffe9a8; color: #5a4300; text-align: center; font-size: .85rem; padding: 6px 16px; }
 
-  .topbar { background: var(--red); color: #fff; font-size: .9rem; }
+  .topbar { background: var(--red); color: #111; font-size: .9rem; }
   .topbar .wrap { display: flex; justify-content: space-between; gap: 12px; padding: 8px 20px; flex-wrap: wrap; }
   .topbar a { font-weight: 600; text-decoration: none; }
 
   header { background: var(--char); color: #fff; position: sticky; top: 0; z-index: 10; }
   header .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; }
   .logo { font-family: Oswald, sans-serif; font-size: 1.55rem; font-weight: 700; text-decoration: none; letter-spacing: .05em; }
-  .logo small { display: block; font-family: Inter, sans-serif; font-size: .7rem; font-weight: 600; letter-spacing: .14em; color: #f2a3a8; margin-top: -4px; }
+  .logo small { display: block; font-family: Inter, sans-serif; font-size: .7rem; font-weight: 600; letter-spacing: .14em; color: #FFB612; margin-top: -4px; }
   nav a { text-decoration: none; margin-left: 22px; font-weight: 600; font-size: .95rem; opacity: .85; }
   nav a:hover { opacity: 1; }
   @media (max-width: 760px) { nav a:not(.btn) { display: none; } }
 
-  .btn { display: inline-block; background: var(--red); color: #fff; text-decoration: none; font-weight: 700;
+  .btn { display: inline-block; background: var(--red); color: #111; text-decoration: none; font-weight: 700;
          padding: 13px 24px; border-radius: 6px; transition: background .15s; opacity: 1 !important; }
   .btn:hover { background: var(--red-dark); }
-  .btn.ghost { background: transparent; border: 2px solid rgba(255,255,255,.55); }
+  .btn.ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.55); }
   header .btn { padding: 9px 16px; }
 
-  .hero { background: linear-gradient(120deg, var(--char) 0%, var(--char-2) 55%, #3a1b1e 100%); color: #fff; padding: 92px 0 100px; position: relative; overflow: hidden; }
+  .hero { background: linear-gradient(120deg, var(--char) 0%, var(--char-2) 55%, #2b2410 100%); color: #fff; padding: 92px 0 100px; position: relative; overflow: hidden; }
   .hero::before { content: ""; position: absolute; right: -80px; top: 40px; width: 460px; height: 460px;
-                  border: 60px solid rgba(179,32,42,.18); transform: rotate(45deg); }
+                  border: 60px solid rgba(255,182,18,.16); transform: rotate(45deg); }
   .hero .wrap { position: relative; }
   .badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
   .badge { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); padding: 5px 12px; border-radius: 999px; font-size: .85rem; }
   .hero h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); max-width: 16ch; }
-  .hero h1 span { color: #ff6b74; }
+  .hero h1 span { color: #FFB612; }
   .hero p { font-size: 1.15rem; max-width: 36rem; margin: 18px 0 30px; color: #cfd0d4; }
   .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
   .trust { background: #fff; border-bottom: 1px solid var(--line); }
   .trust .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 26px 20px; text-align: center; }
-  .trust b { display: block; font-family: Oswald, sans-serif; font-size: 1.7rem; color: var(--red); }
+  .trust b { display: block; font-family: Oswald, sans-serif; font-size: 1.7rem; color: var(--gold-text); }
   .trust span { color: var(--muted); font-size: .9rem; }
   @media (max-width: 700px) { .trust .wrap { grid-template-columns: 1fr 1fr; } }
 
@@ -140,7 +141,7 @@
   .process .sub { color: #b9bbc0; }
   .process ol { list-style: none; counter-reset: s; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 22px; }
   .process li { counter-increment: s; background: var(--char-2); border-radius: 10px; padding: 22px; }
-  .process li::before { content: "0" counter(s); display: block; font-family: Oswald, sans-serif; font-size: 2rem; color: #ff6b74; margin-bottom: 6px; }
+  .process li::before { content: "0" counter(s); display: block; font-family: Oswald, sans-serif; font-size: 2rem; color: #FFB612; margin-bottom: 6px; }
   .process b { display: block; margin-bottom: 4px; }
   .process p { color: #b9bbc0; }
 
@@ -153,11 +154,11 @@
   .faq summary { font-weight: 600; cursor: pointer; }
   .faq details p { color: var(--muted); margin-top: 10px; }
 
-  .cta { background: var(--red); color: #fff; text-align: center; }
-  .cta .sub { color: #ffd9dc; margin: 10px auto 28px; }
-  .cta .btn { background: #fff; color: var(--red); }
-  .cta .btn:hover { background: #ffe9ea; }
-  .cta .areas { margin-top: 34px; font-size: .95rem; color: #ffd9dc; }
+  .cta { background: var(--red); color: #111; text-align: center; }
+  .cta .sub { color: #3a2c00; margin: 10px auto 28px; }
+  .cta .btn { background: #111; color: var(--red); }
+  .cta .btn:hover { background: #222222; }
+  .cta .areas { margin-top: 34px; font-size: .95rem; color: #3a2c00; }
 
   footer { background: var(--char); color: #9a9ca2; text-align: center; padding: 26px 20px; font-size: .9rem; }
 
@@ -166,7 +167,7 @@
   .checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
   .checks div { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px 16px 48px; position: relative; font-weight: 600; }
   .checks div::before { content: "!"; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; border-radius: 50%;
-                        background: var(--red); color: #fff; display: grid; place-items: center; font-size: .8rem; }
+                        background: var(--red); color: #111; display: grid; place-items: center; font-size: .8rem; font-weight: 700; }
   .dmg { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .process .note { color: #b9bbc0; margin-top: 26px; font-size: .95rem; }
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
