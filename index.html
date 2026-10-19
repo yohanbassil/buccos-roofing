@@ -124,6 +124,20 @@
   .cta .areas { margin-top: 34px; font-size: .95rem; color: #3a2c00; }
 
   footer { background: var(--char); color: #9a9ca2; text-align: center; padding: 26px 20px; font-size: .9rem; }
+
+  .hero { background-image: linear-gradient(100deg, rgba(17,17,17,.92) 0%, rgba(17,17,17,.78) 45%, rgba(17,17,17,.35) 100%), url("https://buccosroofing.com/monroeville/wp-content/uploads/sites/14/roof-replacement-section-1-static.png"); background-size: cover; background-position: center; }
+  .hero::before { display: none; }
+  .logo-img { height: 40px; width: auto; display: block; }
+  .feature { display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; align-items: center; }
+  .feature img { width: 100%; height: 100%; max-height: 420px; object-fit: cover; border-radius: 14px; box-shadow: 0 18px 40px rgba(0,0,0,.18); }
+  .feature ul { list-style: none; margin: 18px 0 26px; display: grid; gap: 10px; }
+  .feature li { padding-left: 30px; position: relative; }
+  .feature li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-text); font-weight: 700; }
+  @media (max-width: 800px) { .feature { grid-template-columns: 1fr; } }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+  .gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 10px; display: block; transition: transform .25s; }
+  .gallery img:hover { transform: scale(1.02); }
+  section { padding: 84px 0; }
 </style>
 </head>
 <body>
@@ -138,11 +152,12 @@
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#">BUCCOS ROOFING<small>STATE COLLEGE</small></a>
+    <a class="logo" href="#"><img class="logo-img" src="https://buccosroofing.com/wp-content/uploads/logo_hat_outline_removed_larger.png" alt="Buccos Roofing" onerror="this.outerHTML='BUCCOS ROOFING'"><small>STATE COLLEGE</small></a>
     <nav>
       <a href="#services">Services</a>
       <a href="storm-restoration/">Storm Damage</a>
       <a href="#process">Our Process</a>
+      <a href="#projects">Projects</a>
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
       <a class="btn" href="#estimate">Free Estimate</a>
@@ -192,6 +207,23 @@
   </div>
 </section>
 
+<section class="why">
+  <div class="wrap feature">
+    <img src="https://buccosroofing.com/bethel-park/wp-content/uploads/sites/10/siding-section-1-static.png" alt="Buccos Roofing crew installing siding" loading="lazy" onerror="this.style.display='none'">
+    <div>
+      <h2>A Crew You'll Actually Like Working With</h2>
+      <p class="sub" style="margin-bottom:0">Homeowners keep saying the same thing about Buccos: great communication, photos at every step, and a spotless yard when the job's done.</p>
+      <ul>
+        <li>Free inspection with photos of everything we find</li>
+        <li>Clear, itemized quotes and financing options</li>
+        <li>Daily cleanup and a final walkthrough with you</li>
+        <li>Licensed and insured in Pennsylvania</li>
+      </ul>
+      <a class="btn" href="tel:+18148013876">Call (814) 801-3876</a>
+    </div>
+  </div>
+</section>
+
 <section id="process" class="process">
   <div class="wrap">
     <h2>Our Process</h2>
@@ -202,6 +234,24 @@
       <li><b>Expert install</b><p>Our crew does the job right and keeps you updated along the way.</p></li>
       <li><b>Final walkthrough</b><p>We clean up, inspect the work with you, and stand behind it.</p></li>
     </ol>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Recent Projects</h2>
+    <p class="sub">A few of the roofs we've put on homes and buildings across Pennsylvania.</p>
+    <div class="gallery">
+      <img src="https://buccosroofing.com/wp-content/uploads/Buccos-Roofing-Gallery-1.png" alt="Buccos Roofing project 1" loading="lazy" onerror="this.remove()">
+      <img src="https://buccosroofing.com/wp-content/uploads/Buccos-Roofing-Gallery-2.png" alt="Buccos Roofing project 2" loading="lazy" onerror="this.remove()">
+      <img src="https://buccosroofing.com/wp-content/uploads/Buccos-Roofing-Gallery-3.png" alt="Buccos Roofing project 3" loading="lazy" onerror="this.remove()">
+      <img src="https://buccosroofing.com/wp-content/uploads/Buccos-Roofing-Gallery-4.png" alt="Buccos Roofing project 4" loading="lazy" onerror="this.remove()">
+      <img src="https://buccosroofing.com/wp-content/uploads/Buccos-Roofing-Gallery-5.png" alt="Buccos Roofing project 5" loading="lazy" onerror="this.remove()">
+      <img src="https://buccosroofing.com/wp-content/uploads/Buccos-Roofing-Gallery-6.png" alt="Buccos Roofing project 6" loading="lazy" onerror="this.remove()">
+      <img src="https://buccosroofing.com/wp-content/uploads/Buccos-Roofing-Gallery-7.png" alt="Buccos Roofing project 7" loading="lazy" onerror="this.remove()">
+      <img src="https://buccosroofing.com/wp-content/uploads/Buccos-Roofing-Gallery-8.png" alt="Buccos Roofing project 8" loading="lazy" onerror="this.remove()">
+      <img src="https://buccosroofing.com/wp-content/uploads/Buccos-Roofing-Gallery-9.png" alt="Buccos Roofing project 9" loading="lazy" onerror="this.remove()">
+    </div>
   </div>
 </section>
 

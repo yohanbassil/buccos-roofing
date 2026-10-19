@@ -176,6 +176,10 @@
   .mats li { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--red); border-radius: 8px; padding: 18px; color: var(--muted); }
   .mats b { display: block; color: var(--ink); }
   footer a { color: #fff; }
+
+  .hero { background-image: linear-gradient(100deg, rgba(17,17,17,.92) 0%, rgba(17,17,17,.78) 45%, rgba(17,17,17,.4) 100%), url("https://buccosroofing.com/wp-content/uploads/city-vista-apartments-3-1.png"); background-size: cover; background-position: center; }
+  .hero::before { display: none; }
+  .logo-img { height: 40px; width: auto; display: block; }
 </style>
 </head>
 <body>
@@ -190,7 +194,7 @@
 
 <header>
   <div class="wrap">
-    <a class="logo" href="../">BUCCOS ROOFING<small>STATE COLLEGE</small></a>
+    <a class="logo" href="../"><img class="logo-img" src="https://buccosroofing.com/wp-content/uploads/logo_hat_outline_removed_larger.png" alt="Buccos Roofing" onerror="this.outerHTML='BUCCOS ROOFING'"><small>STATE COLLEGE</small></a>
     <nav>
       <a href="../#services">Services</a>
       <a href="#signs">Warning Signs</a>
